@@ -1,0 +1,189 @@
+
+{% extends 'template.html' %}
+
+{% block title %}
+Form should be Print
+{% endblock title %}
+{% block content %}
+
+{% load static%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<style type="text/css"> 
+  h1 { 
+    color:green; 
+  } 
+  .xyz { 
+    background-size: auto; 
+    text-align: center; 
+    padding-top: 100px; 
+  } 
+  .btn-circle.btn-sm { 
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+  } 
+  .btn-circle.btn-md { 
+    width: 50px; 
+    height: 50px; 
+    padding: 7px 10px; 
+    border-radius: 25px; 
+    font-size: 10px; 
+    text-align: center; 
+  } 
+  .btn-circle.btn-xl { 
+    width: 70px; 
+    height: 70px; 
+    padding: 10px 16px; 
+    border-radius: 35px; 
+    font-size: 12px; 
+    text-align: center; 
+  } 
+  .btn-glyphicon {
+    padding:8px;
+    background:#ffffff;
+    margin-right:4px;
+}
+.icon-btn {
+    padding: 1px 15px 3px 2px;
+    border-radius:50px;
+    margin:10px; /* create gap between buttons for display, you can remove this*/
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top:60%;
+   
+ 
+  font-size: 20px;
+}
+</style>
+<script>
+    $(document).ready(function(){
+       
+        $('#dark_white_board').click(function(e){
+           // var fileName = e.target.files[0].name;
+            //var file = e.dataTransfer.files[0];
+             
+            //alert('The file "' + e.target.files +  '" has been selected.');
+            alert('The file   has been selected.');
+        });
+    });
+</script>
+ 
+
+     
+ 
+ 
+ 
+
+ 
+<br/>
+  <br/>
+  <div class="card bg-dark text-white" id="dark_white_board">
+  <svg class="bd-placeholder-img bd-placeholder-img-lg card-img" 
+  width="100%" height="270" xmlns="http://www.w3.org/2000/svg" 
+  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" 
+  aria-label="Placeholder: Card image">
+    <title>Placeholder</title>
+    <rect width="100%" height="100%" fill="#868e96" />
+    <!--<image href="{% static 'printer.jpg' %}" x="6" y="0"  object-fit='contain'  height="100%" width="100%"/>-->
+   
+    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Drag Document here</text>
+  </svg>
+  <div class="card-img-overlay">
+    <h5 class="card-title">Drag Document here</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div><br/>
+  <br/>
+
+   
+  <a class="btn icon-btn btn-success" href="#">
+    <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+    Add
+    </a>
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+      <i class="material-icons">
+        done
+        </i>
+    </button>
+
+    <i class="material-icons">
+      done
+      </i>
+
+    <button type="submit" class="btn btn-secondary"><span class="fa fa-search"></span> Search</button>
+    <h4>Normal Circle Buttons</h4> 
+	<button type="button" class="btn btn-primary btn-circle btn-sm "><i class="material-icons">
+    done
+    </i></button> 
+	<button type="button" class="btn btn-secondary btn-circle btn-sm">Gray</button> 
+	<button type="button" class="btn btn-success btn-circle btn-sm">Green</button> 
+	<button type="button" class="btn btn-danger btn-circle btn-sm">Red</button> 
+	<button type="button" class="btn btn-warning btn-circle btn-sm">Yellow</button> 
+	<button type="button" class="btn btn-light btn-circle btn-sm">White</button> 
+  <button type="button" class="btn btn-dark btn-circle btn-sm">Black</button> 
+  
+
+<!--
+  <div class="bd-example">
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#666" /><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#555" /><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+
+ <form>
+         
+        <input type="file" webkitdirectory directory multiple/>
+        <p><strong>Note:</strong> Choose any file on your computer and its name will be displayed in an alert dialog box.</p>
+    </form>
+
+    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with 
+    <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.</p>
+    -->
+    {% endblock content %}
